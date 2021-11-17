@@ -1,0 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    // background-image: url(../img/plantBG.jpg)
+}
+
+@import "variables";
+
+.nav {
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    
+
+    .navLogo {
+        display: flex;
+        img {
+            width: 5rem;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    .navItems {
+        
+        ul {
+            @media screen and (max-width: $md-breakpoint) {
+                position: absolute;
+                display: block;
+                margin: 0 auto;
+                padding: 2rem;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                background-color: rgb(81, 122, 105);
+                transform: translateX(-50rem);
+                
+                li{
+                    padding: 2rem;
+                    border-bottom: 1px solid white;
+                }
+            }
+            display: flex;
+            justify-content: space-around;
+            li {
+                list-style-type: none;
+
+                a {
+                    @media screen and (max-width: $md-breakpoint) {
+                        color: white;
+                    }
+                    text-decoration: none;
+                    padding: 2rem;
+                    color: black;
+                }
+            }
+        }
+    }
+
+    .burger{
+        @media screen and (max-width: $md-breakpoint) {
+            display: block;
+        }
+        color: rgb(68, 68, 68);
+        font-size: 4rem;
+        display: none;
+        cursor: pointer;
+    }
+}

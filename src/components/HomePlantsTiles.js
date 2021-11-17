@@ -2,7 +2,8 @@ import React from 'react'
 
 const HomePlantsTiles = ({image, action}) => {
     return (
-        <div className="header-plants" onClick={action}>
+        
+        <div className="tiles-plants" onClick={action}>
             
                 <img src={image}/>
             

@@ -1,31 +1,51 @@
-import React from 'react'
-import logoPlant from "../img/logoPlant.png"
-import ecoLabel from "../img/ecoLabel.png"
+import React, {useState} from 'react';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
+import { library } from '@fortawesome/fontawesome-svg-core';
 
+import MenuItems from './MenuItems';
+import logoPlant from "../img/logoPlant.png";
+import ecoLabel from "../img/ecoLabel.png";
+import navBar from "../stylesheets/navBar.scss";
+
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 export default function NavBar() {
+
+    const [burger, setBurger] = useState(false);
+
+
     return (
 
-        <div className="nav">
+        <nav className="nav">
 
-            <div>
+            <div className="navLogo">
                 <img className="navImage" src={ecoLabel}></img>
-                <p>Certifier agriculture biologique et éco-resposable</p>
+                <img className="navLogo" src={logoPlant}></img>
             </div>
 
-            <div className="info">
-                <ul>
-                    <li>Qui sommes nous?</li>
-                    <img className="navImage" src={logoPlant}></img>
-                    <li>Comment nous contacter?</li>
+            <div className="navItems">
+                <ul style={{transform: burger ? "translateX(0px)" : ""}}>
+                    {MenuItems.map((item, index) => {
+                        return (
+                            <li key={index}>
+                                <a
+                                    onClick={()=> setBurger(!burger)}
+                                    className={item.cName}
+                                    href={item.url}>
+                                        
+                                    {item.title}
+                                    
+                                </a>
+                            </li>
+                        )
+                    })}
+
                 </ul>
+                
             </div>
 
-            <div className="cartImg">
-                <ul>
-                    <li>Mon panier</li>
-                </ul>
-            </div>
-        </div>
+            <div className="burger" onClick={()=> setBurger(!burger)}><FontAwesomeIcon icon={ faBars } /></div>
+
+        </nav>
     )
 }

@@ -15,19 +15,25 @@ body {
 
 .container {
   // background-color: rgba(255, 255, 255, 0.849);
-  margin-left: 10rem;
-  margin-right: 10rem;
-  margin-top: 2rem;
-  
-  .nav{
-    display: flex;
-    justify-content: space-around;
-    .navImage{
-      width: 5%;
-    };
-    .info{
+  margin-left: 7rem;
+  margin-right: 7rem;
+  padding-top: 2rem;
+
+  .header {
+    .headerImage {
       display: flex;
-      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 3rem;
+
+      img {
+        width: 100%;
+        height: 100%;
+        min-height: 1vh;
+      }
+    }
+    hr {
+      margin: 1rem;
     }
   }
 
@@ -35,35 +41,69 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    
+    margin: 1rem;
 
-    img{
-      width: 65%;
+    img {
+      width: 80%;
+      @media screen and (min-width: $sm-breakpoint) {
+        width: 25%;
+      }
     }
-   
   }
 
-  .header-plant {
+  .Infos {
     @media screen and (min-width: $md-breakpoint) {
       display: flex;
-      flex-wrap: wrap;
-      justify-content: space-evenly;
-    }
-
-    .header-plants {
-      flex-basis: 30%;
-      background-color: white;
-      box-shadow: 0 0 2rem #dddddd;
-
-      display: flex;
       flex-direction: column;
-      padding: 2rem;
-      
+      text-align: center;
+      margin: 8rem 10rem 0rem 10rem;
     }
 
-    .header-plants img {
-      width: 100%;
-      
+    display: flex;
+      flex-direction: column;
+      text-align: center;
+
+    .InfosLogo {
+      img {
+        width: 20%;
+      }
+    }
+  }
+
+  .tiles {
+    hr {
+      margin: 4rem;
+    }
+
+    h1 {
+      margin-top: 10rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .tiles-plant {
+      margin-top: 6rem;
+
+      @media screen and (min-width: $md-breakpoint) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+      }
+
+      .tiles-plants {
+        flex-basis: 30%;
+        background-color: white;
+        box-shadow: 0 0 2rem #dddddd;
+
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+      }
+
+      .tiles-plants img {
+        width: 100%;
+      }
     }
   }
 }
