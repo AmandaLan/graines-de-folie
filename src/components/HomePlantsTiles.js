@@ -5,7 +5,7 @@ const HomePlantsTiles = ({image, action}) => {
         
         <div className="tiles-plants" onClick={action}>
             
-                <img src={image}/>
+                <img src={image} alt=""/>
             
         </div>
     )

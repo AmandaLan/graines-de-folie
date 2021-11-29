@@ -1,0 +1,32 @@
+.products {
+    width: 1200px;
+    margin: 6rem auto;
+    columns: 3;
+    column-gap: 4rem;
+    li {
+        width: 100%;
+        margin: 0 0 2rem;
+        background: white;
+        overflow: hidden;
+        break-inside: avoid;
+        box-shadow: 0 0 1rem #dddddd;
+        padding: 2rem;
+        list-style: none;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+@media screen and (max-width: 1200px) {
+    .products {
+        columns: 2;
+        width: calc(100% - 4rem);
+        box-sizing: border-box;
+        padding: 2rem 2rem 2rem 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .products {
+        columns: 1;
+    }
+}

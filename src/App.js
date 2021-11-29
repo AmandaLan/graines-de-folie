@@ -1,7 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
 import './stylesheets/App.scss';
-import { Component } from 'react';
 import HomePlantsTiles from './components/HomePlantsTiles';
 import Navbar from './components/NavBar';
 import Footer from './components/Footer'
@@ -61,10 +59,10 @@ const App = () => {
 
       <div className="header">
         <div className="headerImage">
-          <img src={entete} ></img>
+          <img src={entete} alt=""></img>
         </div>
         <div className="titlePlant">
-          <img src={titlePlant} ></img>
+          <img src={titlePlant} alt=""></img>
         </div>
         <hr></hr>
       </div>
@@ -72,7 +70,7 @@ const App = () => {
 
       <div id="Infos" className="Infos">
         <div className="InfosLogo">
-          <img className="navLogo" src={logoPlant}></img>
+          <img className="navLogo" src={logoPlant} alt=""></img>
 
           <h1>Qui sommes nous?</h1>
 

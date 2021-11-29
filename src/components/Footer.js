@@ -1,7 +1,7 @@
 import React from 'react';
 import FooterItems from './FooterItems';
-import navBar from "../stylesheets/footer.scss";
-import footerBG from "../img/footerBG.jpg"
+import "../stylesheets/footer.scss";
+
 
 export default function Footer() {
 
@@ -11,7 +11,7 @@ export default function Footer() {
                 <div className="contact">
                     <ul>
                         <li>
-                            <h2>adress@email.com</h2>
+                            <h2>contact@graine-de-folie.com</h2>
                         </li>
                         <li>
                             Privacy Policy
@@ -29,7 +29,7 @@ export default function Footer() {
                                     <a
                                         className={item.cfooter}
                                         href={item.url}>
-                                        <img src={item.network} style={{ width: "5rem", color: "white" }} />
+                                        <img src={item.network} alt="footer" style={{ width: "5rem", color: "white" }} />
                                     </a>
                                 </li>
                             )

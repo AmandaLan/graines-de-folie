@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
-import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import MenuItems from './MenuItems';
 import logoPlant from "../img/logoPlant.png";
 import ecoLabel from "../img/ecoLabel.png";
-import navBar from "../stylesheets/navBar.scss";
+import "../stylesheets/navBar.scss";
 
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
@@ -19,8 +18,8 @@ export default function NavBar() {
         <nav className="nav">
 
             <div className="navLogo">
-                <img className="navImage" src={ecoLabel}></img>
-                <img className="navLogo" src={logoPlant}></img>
+                <img className="navImage" src={ecoLabel} alt=""></img>
+                <img className="navLogo" src={logoPlant} alt=""></img>
             </div>
 
             <div className="navItems">
@@ -30,7 +29,7 @@ export default function NavBar() {
                             <li key={index}>
                                 <a
                                     onClick={()=> setBurger(!burger)}
-                                    className={item.cName}
+                                    // className={item.cName}
                                     href={item.url}>
                                         
                                     {item.title}
