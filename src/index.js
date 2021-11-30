@@ -2,21 +2,23 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
-import rootReducer from './reducers';
+import rootReducer from './app/reducers';
+import "./index.scss";
+// import "./app/assets/sass/main.scss"
+import App from './app/App';
+// import Home from './app/components/page/Home';
+import NotFound from './app/components/page/NotFound';
+import Cactus from './app/components/products/Cactus';
+import Flowers from './app/components/products/Flowers';
+import Tropical from './app/components/products/Tropical';
+import ProductDetail from './app/components/products/ProductDetail';
 
-import './index.css';
-import App from './App';
-import NotFound from './components/NotFound';
-import Cactus from './components/Cactus'
-import Flowers from './components/Flowers'
-import Tropical from './components/Tropical'
-import reportWebVitals from './reportWebVitals';
 
 import {
   BrowserRouter as Router,
   Route,
   Switch
-}from 'react-router-dom'
+}from 'react-router-dom';
 
 const store = createStore(
   rootReducer,
@@ -28,9 +30,10 @@ const Root = () => (
     <Switch>
       <Route exact path= '/' component={App}/>
       <Route path='/Cactus' component={Cactus}/>
+      <Route path='/detail/:id' component={ProductDetail}/>
       <Route path='/Flowers' component={Flowers}/>
       <Route path='/Tropical' component={Tropical}/>
-      <Route component={NotFound}/>
+      {/* <Route component={NotFound}/> */}
     </Switch>
   </Router>
 )
@@ -42,7 +45,3 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

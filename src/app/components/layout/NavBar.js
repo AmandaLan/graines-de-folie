@@ -2,9 +2,8 @@ import React, {useState} from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import MenuItems from './MenuItems';
-import logoPlant from "../img/logoPlant.png";
-import ecoLabel from "../img/ecoLabel.png";
-import "../stylesheets/navBar.scss";
+import logoPlant from "../../assets/img/logoPlant.png";
+import ecoLabel from "../../assets/img/ecoLabel.png";
 
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 

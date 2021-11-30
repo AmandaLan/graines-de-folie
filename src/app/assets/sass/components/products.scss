@@ -1,17 +1,19 @@
 .products {
-    width: 1200px;
+    // width: 1400px;
     margin: 6rem auto;
-    columns: 3;
+    columns: 4;
     column-gap: 4rem;
     li {
         width: 100%;
         margin: 0 0 2rem;
         background: white;
-        overflow: hidden;
+        // overflow: hidden;
         break-inside: avoid;
         box-shadow: 0 0 1rem #dddddd;
         padding: 2rem;
         list-style: none;
+        
+        text-align: end;
         img {
             max-width: 100%;
         }

@@ -1,17 +1,15 @@
 import React from 'react';
-import './stylesheets/App.scss';
-import HomePlantsTiles from './components/HomePlantsTiles';
-import Navbar from './components/NavBar';
-import Footer from './components/Footer'
+import HomePlantsTiles from './HomePlantsTiles';
+import Navbar from '../layout/NavBar';
+import Footer from '../layout/Footer'
 import { useHistory } from 'react-router';
 
-
-import titlePlant from './img/titlePlant.png'
-import logoPlant from './img/logoPlant.png'
-import entete from './img/entete.jpg'
+import titlePlant from '../../assets/img/titlePlant.png'
+import logoPlant from '../../assets/img/logoPlant.png'
+import entete from '../../assets/img/entete.jpg'
 import { Fragment } from 'react';
 
-const App = () => {
+const Home = () => {
 
   const plants = [
     {
@@ -101,5 +99,5 @@ const App = () => {
 
 }
 
-export default App;
+export default Home;
 
