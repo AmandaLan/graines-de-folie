@@ -1,0 +1,72 @@
+.productForm {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    margin: auto;
+    
+    background-color: white;   
+    width: 900px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.267);
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    h1 {
+        text-align: center;
+    }
+    .productFormColumn {
+        display: flex;
+        .form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            padding: 2rem;
+            input {
+                padding: 1rem;
+                border: none;
+                box-shadow: inset 1px 1px 5px rgba(117, 117, 117, 0.212);
+                border-radius: 0.2rem;
+            }
+            select {
+                padding: 1rem;
+                border: none;
+                box-shadow: inset 1px 1px 5px rgba(117, 117, 117, 0.212);
+                border-radius: 0.2rem;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            textarea {
+                border: none;
+                box-shadow: inset 1px 1px 5px rgba(117, 117, 117, 0.212);
+                border-radius: 0.2rem;
+            }
+        }
+    }
+    .btnSubmit {
+        margin: auto;
+        padding: 1rem;
+        background-color: rgb(81, 122, 105);
+        border: none;
+        border-radius: 0.2rem;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+.formBG {
+    display: flex;
+    margin-top: 20rem;
+    img {
+        height: 45rem;
+        width: 100%;
+        object-fit: cover;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+}

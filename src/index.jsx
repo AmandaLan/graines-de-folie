@@ -8,6 +8,8 @@ import "./index.scss";
 import App from './app/App';
 // import Home from './app/components/page/Home';
 import NotFound from './app/components/page/NotFound';
+import Admin from './app/components/page/Admin';
+import ProductFormAdmin from './app/components/layout/ProductFormAdmin';
 import Cactus from './app/components/products/Cactus';
 import Flowers from './app/components/products/Flowers';
 import Tropical from './app/components/products/Tropical';
@@ -29,11 +31,13 @@ const Root = () => (
   <Router>
     <Switch>
       <Route exact path= '/' component={App}/>
-      <Route path='/Cactus' component={Cactus}/>
+      <Route path='/cactus' component={Cactus}/>
       <Route path='/detail/:id' component={ProductDetail}/>
-      <Route path='/Flowers' component={Flowers}/>
-      <Route path='/Tropical' component={Tropical}/>
-      {/* <Route component={NotFound}/> */}
+      <Route path='/flowers' component={Flowers}/>
+      <Route path='/tropical' component={Tropical}/>
+      <Route path='/admin' component={Admin}/>
+      <Route path='/ajout-produit' component={ProductFormAdmin}/>
+      <Route component={NotFound}/>
     </Switch>
   </Router>
 )

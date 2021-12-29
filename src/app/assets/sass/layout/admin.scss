@@ -1,0 +1,62 @@
+table,
+th,
+td {
+    border-collapse: collapse;
+}
+
+.addProduct {
+    display: flex;
+    justify-content: end;
+    button {
+        padding: 2rem;
+        margin: 2rem;
+        background: transparent;
+        border-radius: 1rem;
+        border: 0.2rem solid rgb(81, 122, 105);
+        color: rgb(81, 122, 105);
+        font-size: 2rem;
+        font-weight: bold;
+        &:hover {
+            background: rgb(81, 122, 105);
+            color: white;
+            cursor: pointer;
+        }
+    }
+}
+.productTableAdmin {
+    width: 100%;
+    text-align: center;
+    thead {
+        tr {
+            background-color: rgb(81, 122, 105);
+            th {
+                color: white;
+                padding: 3rem;
+            }
+        }
+    }
+    tbody {
+        tr {
+            .productListAdmin {
+                img {
+                    width: 15rem;
+                    height: 15rem;
+                    object-fit: cover;
+                }
+            }
+            .buttonUpdate {
+                button {
+                    background: rgb(81, 122, 105);
+                    border-radius: 0.5rem;
+                    border: 0.2rem solid rgb(81, 122, 105);
+                    color: white;
+                    padding: 1rem;
+                    font-weight: bold;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
