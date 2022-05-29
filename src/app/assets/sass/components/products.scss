@@ -1,14 +1,14 @@
 .products {
     // width: 1400px;
-    margin: 6rem auto;
-    columns: 4;
+    margin: 7rem auto;
+    columns: 3;
     column-gap: 4rem;
     li {
         width: 100%;
-        margin: 0 0 2rem;
+        margin: 2rem 1rem 1rem 1rem;
         background: white;
-        // overflow: hidden;
-        break-inside: avoid;
+        //overflow: hidden;
+        //break-inside: avoid;
         box-shadow: 0 0 1rem #dddddd;
         padding: 2rem;
         list-style: none;

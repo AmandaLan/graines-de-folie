@@ -28,15 +28,10 @@ const Cactus = () => {
                                 <div>
                                     <div>
                                         <img src={cactu.image} alt={cactu.name} />
-                                    </div>
-
-                                </div>
-                                <div>
-                                    <div>
                                         <h2>{cactu.name}</h2>
                                         <h3>{cactu.price}€</h3>
                                     </div>
-                                </div>
+                                </div> 
                             </li>
                         </Link>
                     )
